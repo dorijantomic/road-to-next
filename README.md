@@ -73,9 +73,3 @@ Here's what I'll be covering and learning:
 - Co-founder of CloudCamping
 - Award-winning GitHub star
 
----
-
-## 📂 Repository Structure
-
-This repository is organized to reflect the project structure recommended in the course:
-
