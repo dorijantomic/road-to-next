@@ -73,3 +73,24 @@ Here's what I'll be covering and learning:
 - Co-founder of CloudCamping
 - Award-winning GitHub star
 
+---
+
+## 🌍 Deployment
+
+All applications built during this course are deployed on **Vercel**. You can view live demos of my progress as I implement new features.
+
+---
+
+## 📈 Progress Tracker
+
+- [x] React Server Components
+- [ ] Database Integration with Prisma
+- [ ] Authentication with Oslo.js
+- [ ] Advanced Features (e.g., Stripe Integration, AI Tools)
+- [ ] Final Project Deployment
+
+---
+
+Feel free to explore the code, provide feedback, and star ⭐ the repository if you find it helpful!
+
+
