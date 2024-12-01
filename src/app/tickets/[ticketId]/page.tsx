@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
+import { TicketItem } from "@/components/features/ticket/components/ticket-item";
 import { Placeholder } from "@/components/placeholder";
 import { buttonVariants } from "@/components/ui/button";
 import { initialTickets } from "@/data";
@@ -13,8 +14,8 @@ type TicketPageProps = {
 };
 
 const TicketPage = ({ params }: TicketPageProps) => {
-  const ticket = initialTickets.find((t) => t.id === params.ticketId);
-  if (!ticket)
+  const t = initialTickets.find((t) => t.id === params.ticketId);
+  if (!t)
     return (
       <Placeholder
         label="Ticket not found"
@@ -29,9 +30,8 @@ const TicketPage = ({ params }: TicketPageProps) => {
       />
     );
   return (
-    <div>
-      <h2 className="text-lg">{ticket.title}</h2>
-      <p>{ticket.content}</p>
+    <div className="flex justify-center animated-fade-in-from-top">
+      <TicketItem ticket={t} isDetail />
     </div>
   );
 };
