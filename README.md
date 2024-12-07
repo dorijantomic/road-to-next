@@ -84,7 +84,7 @@ All applications built during this course are deployed on **Vercel**. You can vi
 ## 📈 Progress Tracker
 
 - [x] React Server Components
-- [ ] Database Integration with Prisma
+- [x] Database Integration with Prisma
 - [ ] Authentication with Oslo.js
 - [ ] Advanced Features (e.g., Stripe Integration, AI Tools)
 - [ ] Final Project Deployment
