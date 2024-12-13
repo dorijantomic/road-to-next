@@ -4,8 +4,8 @@ import { CardCompact } from "@/components/card-compact";
 import { TicketList } from "@/components/features/ticket/components/ticket-list";
 import { TicketUpsertForm } from "@/components/features/ticket/components/ticket-upsert-form";
 import { Heading } from "@/components/heading";
-import { Spinner } from "@/components/spinner";
 import { RedirectToast } from "@/components/redirect-toast";
+import { Spinner } from "@/components/spinner";
 
 const TicketsPage = () => {
   return (

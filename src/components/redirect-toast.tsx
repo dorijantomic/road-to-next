@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { toast } from "sonner";
+
 import { deleteCookieByKey, getCookieByKey } from "@/actions/cookies";
 
 const RedirectToast = () => {
