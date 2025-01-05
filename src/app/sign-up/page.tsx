@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SignUpPage: React.FC = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex-1 flex flex-col justify-center items-center">
       <CardCompact
         title="Sign Up"
         description="Create an account to get started"
