@@ -1,4 +1,9 @@
 "use server";
+import { hash } from "@node-rs/argon2";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { z } from "zod";
+
 import {
   ActionState,
   fromErrorToActionState,
@@ -6,10 +11,6 @@ import {
 import { lucia } from "@/lib/lucia";
 import { prisma } from "@/lib/prisma";
 import { ticketsPath } from "@/paths";
-import { hash } from "@node-rs/argon2";
-import { cookies } from "next/headers";
-import { z } from "zod";
-import { redirect } from "next/navigation";
 
 const signUpSchema = z
   .object({
