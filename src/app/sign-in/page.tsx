@@ -1,7 +1,8 @@
+import Link from "next/link";
+
 import { CardCompact } from "@/components/card-compact";
 import { SignInForm } from "@/components/features/auth/components/sign-in-form";
 import { passwordForgotPath, signUpPath } from "@/paths";
-import Link from "next/link";
 
 const SignInPage: React.FC = () => {
   return (
