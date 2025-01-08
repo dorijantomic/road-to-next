@@ -1,4 +1,5 @@
 import { hashToken } from "@/utils/crypto";
+
 import { prisma } from "./prisma";
 
 const SESSION_REFRESH_INTERVAL_MS = 1000 * 60 * 60 * 24 * 15; // 15 days

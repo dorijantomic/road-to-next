@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { z } from "zod";
+
 import {
   ActionState,
   fromErrorToActionState,
@@ -11,8 +12,9 @@ import { createSession } from "@/lib/lucia";
 import { prisma } from "@/lib/prisma";
 import { ticketsPath } from "@/paths";
 import { generateRandomToken } from "@/utils/crypto";
+
+import { verifyPasswordHash } from "../../password/utils/hash-and-verify";
 import { setSessionCookie } from "../utils/session-cookie";
-import { verifyPasswordHash } from "@/components/password/utils/hash-and-verify";
 
 const signInSchema = z.object({
   email: z.string().min(1, { message: "Is required" }).max(191).email(),
