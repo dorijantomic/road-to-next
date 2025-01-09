@@ -10,8 +10,22 @@ import {
 import { prisma } from "@/lib/prisma";
 import { ticketsPath } from "@/paths";
 
+import { isOwner } from "../../auth/utils/is-owner";
+import { getAuthOrRedirect } from "../queries/get-auth-or-redirect";
+
 export const updateTicketStatus = async (id: string, status: TicketStatus) => {
+  const { user } = await getAuthOrRedirect();
   try {
+    const ticket = await prisma.ticket.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    if (!ticket || !isOwner(user, ticket)) {
+      return toActionState("Not authorized", "ERROR");
+    }
+
     await prisma.ticket.update({
       where: { id },
       data: { status },
